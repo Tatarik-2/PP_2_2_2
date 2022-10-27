@@ -1,9 +1,11 @@
 package web.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,5 +22,37 @@ public class HelloController {
 		model.addAttribute("messages", messages);
 		return "index";
 	}
-	
+
+//	@GetMapping(value = "/car")
+//	public String printCar(@RequestParam(value = "carModel", required = false) String mod,
+//						   Model model){
+////		System.out.println(mod + " " + mod);
+//		model.addAttribute("mod", mod);
+//		return "test/car";
+//	}
+//
+//	@GetMapping(value = "/calc")
+//	public String calculator(@RequestParam(value = "a") int a,
+//							 @RequestParam(value = "b") int b,
+//							 @RequestParam(value = "action") String action,
+//							 Model model){
+//		int result = 0;
+//
+//		switch (action){
+//			case "multi":
+//				result = a * b;
+//				break;
+//			case "add":
+//				result = a + b;
+//				break;
+//			case "sub":
+//				result = a - b;
+//				break;
+//			case "div":
+//				result = a /b;
+//				break;
+//		}
+//		model.addAttribute("result", result);
+//		return "test/calc";
+//	}
 }
